@@ -12,6 +12,9 @@ livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
   * Update Standards-Version to 4.7.0, no changes needed.
   * Add support for multiple pools (/var/lib/{livefs,preinstalled}-pool/).
 
+  [ Simon Poirier ]
+  * increase ubuntu-cpc ppc64el disk size to 2.4G
+
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 17 Feb 2025 11:12:00 +1300
 
 livecd-rootfs (25.04.17) plucky; urgency=medium

@@ -9,6 +9,9 @@ esac
 
 IMAGE_STR="# CLOUD_IMG: This file was created/modified by the Cloud Image build process"
 FS_LABEL="cloudimg-rootfs"
+# 2.4G GiB
+# Since Plucky, ppc64el need more than the default 2.2GiB
+IMAGE_SIZE=2576980378
 
 . config/binary
 
