@@ -9,6 +9,7 @@ livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
     when specifying EXTRA_PPAS.
   * Update debhelper compat to 13, no changes needed.
   * Make the package completely Lintian-clean except for no-dep5-copyright.
+  * Update Standards-Version to 4.7.0, no changes needed.
 
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 17 Feb 2025 11:12:00 +1300
 
