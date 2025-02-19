@@ -1,7 +1,12 @@
 livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
 
+  [ Michael Hudson-Doyle ]
   * Pre-emptively include the override to not try to build HWE kernel layer in
     post .2 server riscv64 ISOs.
+
+  [ Simon Quigley ]
+  * Move from http://ppa.launchpad.net to https://ppa.launchpadcontent.net
+    when specifying EXTRA_PPAS.
 
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 17 Feb 2025 11:12:00 +1300
 

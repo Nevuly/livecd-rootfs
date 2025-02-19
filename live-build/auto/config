@@ -1589,8 +1589,8 @@ if [ "$EXTRA_PPAS" ]; then
 		extra_ppa_fingerprint="$(/usr/share/livecd-rootfs/get-ppa-fingerprint "$extra_ppa")"
 
 		cat >> config/archives/extra-ppas.list.chroot <<EOF
-deb http://ppa.launchpad.net/$extra_ppa/ubuntu @DISTRIBUTION@ main
-deb-src http://ppa.launchpad.net/$extra_ppa/ubuntu @DISTRIBUTION@ main
+deb https://ppa.launchpadcontent.net/$extra_ppa/ubuntu @DISTRIBUTION@ main
+deb-src https://ppa.launchpadcontent.net/$extra_ppa/ubuntu @DISTRIBUTION@ main
 EOF
 
 		if [ -n "$extra_ppa_pin" ]; then
