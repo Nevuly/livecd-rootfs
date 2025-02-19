@@ -5,6 +5,8 @@ Build-Depends: debhelper-compat (= 13)
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Standards-Version: 3.9.6
 Vcs-Git: https://git.launchpad.net/livecd-rootfs -b ubuntu/master
+Vcs-Browser: https://git.launchpad.net/livecd-rootfs
+Rules-Requires-Root: no
 
 Package: livecd-rootfs
 Architecture: any

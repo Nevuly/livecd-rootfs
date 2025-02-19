@@ -1,5 +1,6 @@
 [Unit]
 Description=inhibit disk automounting
+Documentation=man:udevadm
 Before=udisks2.service
 
 [Service]

@@ -8,6 +8,7 @@ livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
   * Move from http://ppa.launchpad.net to https://ppa.launchpadcontent.net
     when specifying EXTRA_PPAS.
   * Update debhelper compat to 13, no changes needed.
+  * Make the package completely Lintian-clean except for no-dep5-copyright.
 
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 17 Feb 2025 11:12:00 +1300
 
@@ -569,7 +570,7 @@ livecd-rootfs (24.04.43) noble; urgency=medium
     grub updates in cloud images (LP: #2054103)
 
  -- Philip Roche <phil.roche@canonical.com>  Fri, 23 Feb 2024 13:54:57 +0000
- 
+
 livecd-rootfs (24.04.42) noble; urgency=medium
 
   [ Sean Davis ]
@@ -695,8 +696,8 @@ livecd-rootfs (24.04.27) noble; urgency=medium
 livecd-rootfs (24.04.26) noble; urgency=medium
 
   [ Steve Langasek ]
-  * Share live-build/ubuntu/hooks/020-ubuntu-live.chroot_early across 
-    all flavors using new-style layered squashfs, removing need for 
+  * Share live-build/ubuntu/hooks/020-ubuntu-live.chroot_early across
+    all flavors using new-style layered squashfs, removing need for
     kernel commandline options in debian-cd.
 
   [ dann frazier ]
@@ -828,7 +829,7 @@ livecd-rootfs (24.04.10) noble; urgency=medium
   * Set C.UTF-8 locale in /etc/default/locale for all images; originally
     intended to be landed in the cosmic cycle..
   * Project name for Ubuntu Studio needs to be 'ubuntustudio-dvd'
-    throughout, not 'ubuntustudio'.  
+    throughout, not 'ubuntustudio'.
 
  -- Steve Langasek <steve.langasek@ubuntu.com>  Fri, 08 Dec 2023 15:07:41 -0800
 
@@ -907,7 +908,7 @@ livecd-rootfs (24.04.2) noble; urgency=medium
     instead of /boot/vmlinuz. (LP: #2038957)
 
  -- Philip Roche <phil.roche@canonical.com>  Thu, 26 Oct 2023 17:56:00 +0100
- 
+
 livecd-rootfs (24.04.1) noble; urgency=medium
 
   [ Steve Langasek ]
