@@ -1,4 +1,4 @@
-livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
+livecd-rootfs (25.04.18) plucky; urgency=medium
 
   [ Michael Hudson-Doyle ]
   * Pre-emptively include the override to not try to build HWE kernel layer in
@@ -15,7 +15,7 @@ livecd-rootfs (25.04.18) UNRELEASED; urgency=medium
   [ Simon Poirier ]
   * increase ubuntu-cpc ppc64el disk size to 2.4G
 
- -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 17 Feb 2025 11:12:00 +1300
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Thu, 20 Feb 2025 10:24:04 +1300
 
 livecd-rootfs (25.04.17) plucky; urgency=medium
 
