@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ## live-build(7) - System Build Scripts
 ## Copyright (C) 2006-2012 Daniel Baumann <daniel@debian.org>
