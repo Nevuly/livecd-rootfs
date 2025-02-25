@@ -1,3 +1,9 @@
+livecd-rootfs (25.04.19) plucky; urgency=medium
+
+  * add cpc-sbom to create_manifest calls to generate sboms (LP: #2077105)
+
+ -- Thomas Bechtold <thomasbechtold@jpberlin.de>  Tue, 25 Feb 2025 13:20:49 +0100
+
 livecd-rootfs (25.04.18) plucky; urgency=medium
 
   [ Michael Hudson-Doyle ]
