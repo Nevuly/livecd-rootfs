@@ -7,6 +7,14 @@ livecd-rootfs (25.04.20) UNRELEASED; urgency=medium
   * In ubuntu-server builds, install the first kernel in the base layer, not
     the "ga" kernel (which may not be installed at all, as is the case in e.g.
     the arm64+largemem builds).
+  * Again in ubuntu-server builds, configure LAYERFS_PATH in the kernel layer
+    and ensure the initrd is freshly regenerated in that layer. LAYERFS_PATH
+    was being set to the layer below the kernel layer, which meant that the
+    live session did not get access to all the modules in the case that the
+    kernel had not been installed in the base layer, which in turn means that
+    installs fail. (LP: #2100148)
+  * While we're at it, delete any initrd from any other layer than a kernel
+    layer, as they just waste space on the ISO.
 
  -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Thu, 27 Feb 2025 11:41:22 +1300
 
