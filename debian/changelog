@@ -1,8 +1,14 @@
 livecd-rootfs (25.04.20) UNRELEASED; urgency=medium
 
+  [ Adriano Cordova ]
   * riscv: add SUBARCH 'jh7110'. (LP: #2099993)
 
- -- Adriano Cordova <adriano.cordova@canonical.com>  Tue, 25 Feb 2025 15:28:06 -0300
+  [ Michael Hudson-Doyle ]
+  * In ubuntu-server builds, install the first kernel in the base layer, not
+    the "ga" kernel (which may not be installed at all, as is the case in e.g.
+    the arm64+largemem builds).
+
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Thu, 27 Feb 2025 11:41:22 +1300
 
 livecd-rootfs (25.04.19) plucky; urgency=medium
 
