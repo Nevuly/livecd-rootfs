@@ -1,4 +1,4 @@
-livecd-rootfs (25.04.20) UNRELEASED; urgency=medium
+livecd-rootfs (25.04.20) plucky; urgency=medium
 
   [ Adriano Cordova ]
   * riscv: add SUBARCH 'jh7110'. (LP: #2099993)
@@ -16,7 +16,7 @@ livecd-rootfs (25.04.20) UNRELEASED; urgency=medium
   * While we're at it, delete any initrd from any other layer than a kernel
     layer, as they just waste space on the ISO.
 
- -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Thu, 27 Feb 2025 11:41:22 +1300
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Thu, 27 Feb 2025 20:34:01 +1300
 
 livecd-rootfs (25.04.19) plucky; urgency=medium
 
