@@ -1,4 +1,4 @@
-livecd-rootfs (25.04.20) plucky; urgency=medium
+livecd-rootfs (25.04.20) UNRELEASED; urgency=medium
 
   * riscv: add SUBARCH 'jh7110'. (LP: #2099993)
 
