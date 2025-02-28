@@ -78,6 +78,14 @@ BINARY_HOOKS=
 
 APT_OPTIONS=" --yes -oDebug::pkgDepCache::AutoInstall=yes "
 
+# Should we attempt to offer both the bridge and default kernel?
+USE_BRIDGE_KERNEL=false
+# Why are we using bridge kernel?  Value is ignored for USE_BRIDGE_KERNEL=false.
+# Possible reasons are zfs, drivers.
+BRIDGE_KERNEL_REASONS="zfs,drivers"
+# When building install-sources, what kernel is the default?
+DEFAULT_KERNEL=
+
 PASSES_TO_LAYERS=false
 _PASSES_TO_LAYERS=		# Stores the initial value of PASSES_TO_LAYERS
 PASSES=
@@ -238,28 +246,6 @@ add_snap ()
 	for pkg; do
 		echo "$pkg$channel" >> "config/package-lists/livecd-rootfs.snaplist.chroot_$pass.full"
 	done
-}
-
-write_kernel_yaml () {
-	# Generate the kernel.yaml fragment used as input for
-	# update-source-catalog.  Handles default kernel specification.
-	# $1 kernel metapackage name
-	local metapkg="$1"
-	cat <<-EOF > config/kernel.yaml
-		kernel:
-		  default: "$metapkg"
-	EOF
-
-	# To specify fallback to a bridge kernel, construct a kernel.yaml
-	# with the following:
-	#
-	# kernel:
-	#   default: foo
-	#   bridge: bar
-	#   bridge_reasons: [zfs, drivers]
-	#
-	# If an install is using zfs or "drivers", use the bridge kernel, else
-	# use the default kernel.
 }
 
 get_seeded_languages () {
@@ -812,7 +798,7 @@ do_layered_desktop_image() {
 		EOF
 	fi
 
-	write_kernel_yaml "linux-$KERNEL_FLAVOURS"
+	DEFAULT_KERNEL="linux-$KERNEL_FLAVOURS"
 
 	if [ "$LOCALE_SUPPORT" != none ]; then
 		/usr/share/livecd-rootfs/checkout-translations-branch \
@@ -1105,7 +1091,7 @@ case $PROJECT in
 				esac
 				NO_SQUASHFS_PASSES=ubuntu-server-minimal.ubuntu-server.installer.$flavor.netboot
 
-				write_kernel_yaml $kernel_metapkg
+				DEFAULT_KERNEL="$kernel_metapkg"
 				/usr/share/livecd-rootfs/checkout-translations-branch \
 					https://git.launchpad.net/subiquity po config/catalog-translations
 				;;
@@ -1133,7 +1119,8 @@ case $PROJECT in
 	    add_package base.live linux-image-generic
 
 	    # Core installer images use the pc-kernel snap for its kernel
-	    write_kernel_yaml "snap:pc-kernel"
+	    USE_BRIDGE_KERNEL=false
+	    DEFAULT_KERNEL="snap:pc-kernel"
 
 	    /usr/share/livecd-rootfs/checkout-translations-branch \
 		https://git.launchpad.net/subiquity po config/catalog-translations
@@ -1399,6 +1386,9 @@ echo "BUILDSTAMP=\"$NOW\"" >> config/binary
 echo "SUBPROJECT=\"${SUBPROJECT:-}\"" >> config/binary
 echo "LB_DISTRIBUTION=\"$SUITE\"" >> config/binary
 echo "CHANNEL=\"${CHANNEL:-}\"" >> config/binary
+echo "USE_BRIDGE_KERNEL=\"${USE_BRIDGE_KERNEL:-}\"" >> config/binary
+echo "BRIDGE_KERNEL_REASONS=\"${BRIDGE_KERNEL_REASONS:-}\"" >> config/binary
+echo "DEFAULT_KERNEL=\"${DEFAULT_KERNEL:-}\"" >> config/binary
 
 if [ "${IMAGE_HAS_HARDCODED_PASSWORD:-}" = "1" ]; then
 	echo IMAGE_HAS_HARDCODED_PASSWORD=1 >> config/binary

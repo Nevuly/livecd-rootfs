@@ -204,7 +204,8 @@ do
 	build_layered_squashfs "${_PASS}" ${*}
 done
 
-if [ -f config/kernel.yaml ]; then
+if [ -n "$DEFAULT_KERNEL" -a -f livecd.${PROJECT_FULL}.install-sources.yaml ]; then
+	write_kernel_yaml "$DEFAULT_KERNEL" "$BRIDGE_KERNEL_REASONS"
 	/usr/share/livecd-rootfs/update-source-catalog merge \
 		--output livecd.${PROJECT_FULL}.install-sources.yaml \
 		--template config/kernel.yaml

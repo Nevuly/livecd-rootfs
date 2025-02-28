@@ -1337,3 +1337,39 @@ reset_snapd_state() {
     chroot "$rootdir" apt-get install --reinstall -y snapd
     teardown_mountpoint "$rootdir"
 }
+
+write_kernel_yaml() {
+    # Generate the kernel.yaml fragment used as input for
+    # update-source-catalog.
+    #
+    # the newer kernel is the default kernel!
+    # bridge is the older, fallback kernel.
+    # $1 string, default kernel, such as "linux-generic"
+    # $2 string with comma seperated list of bridge reasons,
+    #    usually "zfs,drivers"
+    local default="$1"
+    local reasons="$2"
+
+    cat <<EOF > config/kernel.yaml
+kernel:
+  default: "$default"
+EOF
+
+    # To specify fallback to a bridge kernel, construct a kernel.yaml
+    # with the following:
+    #
+    # kernel:
+    #   default: linux-foo
+    #   bridge: linux-foo-brg-YY.MM
+    #   bridge_reasons: [zfs, drivers]
+    #
+    # If an install is using zfs or "drivers", use the bridge kernel, else
+    # use the default kernel.
+
+    if $USE_BRIDGE_KERNEL ; then
+        cat <<EOF >> config/kernel.yaml
+  bridge: "${default}-brg-$(release_ver)"
+  bridge_reasons: [$reasons]
+EOF
+    fi
+}
