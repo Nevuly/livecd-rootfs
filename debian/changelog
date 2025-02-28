@@ -1,3 +1,10 @@
+livecd-rootfs (25.04.21) plucky; urgency=medium
+
+  * With subiquity builds, setup install-sources to offer bridge kernel.
+  * Add USE_BRIDGE_KERNEL to make it easier to control in the future.
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Wed, 05 Mar 2025 08:18:54 -0700
+
 livecd-rootfs (25.04.20) plucky; urgency=medium
 
   [ Adriano Cordova ]
