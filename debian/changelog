@@ -1,3 +1,11 @@
+livecd-rootfs (25.04.22) plucky; urgency=medium
+
+  * server: leave the initrd.img symlink, we want that later for probably
+    several reasons but at least for LP: #2101831
+  * desktop: update TPMFDE model for 25.04.
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Tue, 11 Mar 2025 09:16:03 -0600
+
 livecd-rootfs (25.04.21) plucky; urgency=medium
 
   * With subiquity builds, setup install-sources to offer bridge kernel.
