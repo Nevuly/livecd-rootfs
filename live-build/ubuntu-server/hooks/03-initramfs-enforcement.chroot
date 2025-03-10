@@ -20,7 +20,7 @@ case $PASS in
     ubuntu-server-minimal.ubuntu-server.installer.*)
         ;;
     *)
-        rm -f /boot/initrd.img*
+        rm -f /boot/initrd.img-*
         exit 0
         ;;
 esac
