@@ -1,3 +1,9 @@
+livecd-rootfs (25.04.23) plucky; urgency=medium
+
+  * Add 6.14 kernel apparmor features' preseeds. (LP: #2102120)
+
+ -- Jess Jang <jess.jang@canonical.com>  Wed, 12 Mar 2025 21:08:31 -0500
+
 livecd-rootfs (25.04.22) plucky; urgency=medium
 
   * server: leave the initrd.img symlink, we want that later for probably
