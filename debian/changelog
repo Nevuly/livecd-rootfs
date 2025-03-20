@@ -1,3 +1,10 @@
+livecd-rootfs (25.04.25) plucky; urgency=medium
+
+  * live-build/auto/build: Use --workdir in ubuntu-image to avoid filling
+    tmpfs-based /tmp (LP: #2103735)
+
+ -- Dave Jones <dave.jones@canonical.com>  Thu, 20 Mar 2025 17:22:47 +0000
+
 livecd-rootfs (25.04.24) plucky; urgency=medium
 
   * desktop: update TPMFDE model to move pc-kernel to channel 25.04/stable.
