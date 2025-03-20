@@ -48,8 +48,9 @@ if [ "${IMAGEFORMAT:-}" = "ubuntu-image" ]; then
 		exit 0
 	else
 		# Ubuntu classic preinstalled images
+		# --workdir is specified to avoid filling /tmp which is now a tmpfs
 		/snap/bin/ubuntu-image classic --verbose $UBUNTU_IMAGE_ARGS \
-			-O output "$IMAGE_DEFINITION"
+			--workdir work -O output "$IMAGE_DEFINITION"
 		# Since the output of the ubuntu-image call can vary based on what
 		# kind of an image we build, the safest bet is to 'export' all the
 		# artifacts from the output directory. The image definition file
