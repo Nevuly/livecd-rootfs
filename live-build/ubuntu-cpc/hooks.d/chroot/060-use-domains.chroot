@@ -1,0 +1,9 @@
+#!/bin/bash
+ 
+# See https://bugs.launchpad.net/cloud-images/+bug/2106729
+
+mkdir -p /etc/systemd/networkd.conf.d/
+cat >/etc/systemd/networkd.conf.d/50-cloudimg-settings.conf <<EOF
+[Network]
+UseDomains=true
+EOF
