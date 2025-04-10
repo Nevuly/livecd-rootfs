@@ -1,3 +1,9 @@
+livecd-rootfs (25.04.26) plucky; urgency=medium
+
+  * cpc: Restore UseDomains=true in cloud images (LP: #2106729)
+
+ -- Tomáš Virtus <tomas.virtus@canonical.com>  Thu, 10 Apr 2025 13:07:25 +0000
+
 livecd-rootfs (25.04.25) plucky; urgency=medium
 
   * live-build/auto/build: Use --workdir in ubuntu-image to avoid filling
