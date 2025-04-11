@@ -1,3 +1,12 @@
+livecd-rootfs (25.10.1) questing; urgency=medium
+
+  * desktop: no longer involve cloud-init in early networking (LP: #2107225)
+  * server: provide network config direct to netplan
+  * server: update default netplan config for IPv6 autoconfiguration &
+    connectivity
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Mon, 28 Apr 2025 09:53:34 -0600
+
 livecd-rootfs (25.04.26) plucky; urgency=medium
 
   * cpc: Restore UseDomains=true in cloud images (LP: #2106729)
