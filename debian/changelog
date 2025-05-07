@@ -1,3 +1,14 @@
+livecd-rootfs (25.10.6) questing; urgency=medium
+
+  * lb_binary_layered: fix mtimes in layered squashfses. (LP: #2107332)
+    Failing to preserve mtime causes unnecessary python pyc rebuilds due to
+    mtime mismatch, and it's generally strange that reinstalling a package
+    that is already installed changes the files on the system (minus
+    intentional differences such as what's going on in the minimized install
+    source).
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Fri, 30 May 2025 17:05:15 -0600
+
 livecd-rootfs (25.10.5) questing; urgency=medium
 
   * desktop: TPMFDE snapd from latest/edge
