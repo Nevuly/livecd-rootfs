@@ -2,12 +2,6 @@
 
 set -eux
 
-# don't build the TPMFDE bits right now
-# we need a matching kernel and snapd to avoid this error:
-# error: snapd 2.68+ is not compatible with a kernel containing snapd prior to 2.68
-echo "SKIPPING 020-ubuntu-enhanced-sb.binary"
-exit 0
-
 case ${PASS:-} in
     minimal.standard.enhanced-secureboot)
         ;;
