@@ -1,3 +1,11 @@
+livecd-rootfs (25.10.3) questing; urgency=medium
+
+  * desktop: update TPMFDE model and don't skip 020-ubuntu-enhanced-sb.binary.
+    (LP: #2110195)  Temporarily use the model that allows overriding snap
+    channels so we can get matching snaps.
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Fri, 23 May 2025 12:59:40 -0600
+
 livecd-rootfs (25.10.2) questing; urgency=medium
 
   * desktop: skip 020-ubuntu-enhanced-sb.binary until a matching kernel is
