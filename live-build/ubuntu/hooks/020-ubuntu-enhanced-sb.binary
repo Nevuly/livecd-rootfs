@@ -20,6 +20,21 @@ fi
 . config/binary
 . config/functions
 
+# Generation of the model:
+# * At https://github.com/canonical/models one can find a repo of raw,
+#   unsigned, input .json files, and their signed .model equivalents.
+# * At least once per cycle, update the json for the new Ubuntu version.
+#   To do this, take the previous cycle ubuntu-classic-$ver-amd64.json file,
+#   rename for the new version, and do any necessary updates including fixing
+#   the versions of tracks.
+# * When this is done, the json needs to be signed.  This needs to be done by
+#   a Canonical employee - try asking someone who has recently opened PRs on
+#   https://github.com/canonical/models with the signed models.
+# * Ensure the signed and unsigned version of the models are updated in the
+#   models repo.
+# * The signed model can then be placed here in livecd-rootfs at
+#   live-build/${PROJECT}/ubuntu-classic-amd64.model
+
 # env SNAPPY_STORE_NO_CDN=1 snap known --remote model series=16 brand-id=canonical model=ubuntu-classic-2410-amd64 > config/classic-model.model
 model=/usr/share/livecd-rootfs/live-build/${PROJECT}/ubuntu-classic-amd64.model
 
