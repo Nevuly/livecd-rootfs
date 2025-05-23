@@ -2,93 +2,88 @@ type: model
 authority-id: canonical
 series: 16
 brand-id: canonical
-model: ubuntu-classic-2510-amd64
+model: ubuntu-classic-2510-amd64-dangerous
 architecture: amd64
 base: core24
 classic: true
 distribution: ubuntu
-grade: signed
+grade: dangerous
 snaps:
   -
-    default-channel: classic-25.10/stable
+    default-channel: classic-25.10/edge
     id: UqFziVZDHLSyO3TqSWgNBoAdHbLI4dAH
     name: pc
     type: gadget
   -
-    default-channel: 25.10/stable
+    default-channel: 25.10/edge
     id: pYVQrBcKmBa0mZ4CCN7ExT6jH8rY1hza
     name: pc-kernel
     type: kernel
   -
-    default-channel: latest/stable
+    default-channel: latest/edge
     id: amcUKQILKXHHTlmSa7NMdnXSx02dNeeT
     name: core22
     type: base
   -
-    default-channel: latest/stable
-    id: dwTAh7MZZ01zyriOZErqd1JynQLiOGvM
-    name: core24
-    type: base
-  -
-    default-channel: latest/stable
+    default-channel: latest/edge
     id: PMrrV4ml8uWuEUDBT8dSGnKUYbevVhc4
     name: snapd
     type: snapd
   -
-    default-channel: latest/stable
+    default-channel: latest/edge
     id: EISPgh06mRh1vordZY9OZ34QHdd7OrdR
     name: bare
     type: base
   -
-    default-channel: 1/stable/ubuntu-25.04
+    default-channel: latest/edge
     id: EI0D1KHjP8XiwMZKqSjuh6W8zvcowUVP
     name: firmware-updater
     type: app
   -
-    default-channel: 1/stable/ubuntu-25.04
+    default-channel: latest/edge
     id: FppXWunWzuRT2NUT9CwoBPNJNZBYOCk0
     name: desktop-security-center
     type: app
   -
-    default-channel: 1/stable/ubuntu-25.04
+    default-channel: latest/edge
     id: aoc5lfC8aUd2VL8VpvynUJJhGXp5K6Dj
     name: prompting-client
     type: app
   -
-    default-channel: 2/stable/ubuntu-25.04
+    default-channel: latest/edge
     id: gjf3IPXoRiipCu9K0kVu52f0H56fIksg
     name: snap-store
     type: app
   -
-    default-channel: latest/stable/ubuntu-25.10
+    default-channel: latest/edge
     id: jZLfBRzf1cYlYysIjD2bwSzNtngY0qit
     name: gtk-common-themes
     type: app
   -
-    default-channel: latest/stable/ubuntu-25.10
+    default-channel: latest/edge
     id: 3wdHCAVyZEmYsCMFDE9qt92UV8rC8Wdk
     name: firefox
     type: app
   -
-    default-channel: latest/stable/ubuntu-25.10
+    default-channel: latest/edge
     id: lATO8HzwVvrAPrlZRAWpfyrJKlAJrZS3
     name: gnome-42-2204
     type: app
   -
-    default-channel: latest/stable/ubuntu-25.10
+    default-channel: latest/edge
     id: IrwRHakqtzhFRHJOOPxKVPU0Kk7Erhcu
     name: snapd-desktop-integration
     type: app
 timestamp: 2025-05-01T12:00:00.0Z
 sign-key-sha3-384: 9tydnLa6MTJ-jaQTFUXEwHl1yRx7ZS4K5cyFDhYDcPzhS7uyEkDxdUjg9g08BtNn
 
-AcLBXAQAAQoABgUCaBpC0wAKCRDgT5vottzAEhmlD/49Qh9xR4d9mC5cdfoj4jZDZ/IS8y2x8PSt
-gnFUWXE9Gm0PgPfa6R550d3WZwzgHfNgyLLbMzLeIJHbaJDizEj3ouEBsDj66/w4vEcHe0rkpayb
-iPiWcDb8nHT5CgdpOlW35B6FJ/++XGE5ag3OAamz2kIEWdBgwYk2XhkLErVQOg+VBxG0xsra5HTb
-fuTBfKZ8j2S13CsTuwZLY6GgrgoQUgCPAvAPfJJnezGG90/M0gjCE1PRrh9TPDYMiGOSuRhez0aj
-SryjzCINe6BBzFKbjSVLktxtlt+7rNZmFrqr/Wkg5qUoo+NH5damKJjL1HN8sBD3oyUaCxqGai/b
-0cDv1MJnglQXG1iLPvFmcG7eqaSLOtwe/Vr0HgMtrmPhOdJsv50uA7NtxDz56ojjOYHvQ85wZz9n
-b2JPCLmOk6GaPVmbOZtgyaQ+ICFcoqIHdpncm+gNZzYVTkR+OfItRIKPFr5+zlg5zRHHnPbWTlxM
-4WddnQbSPzY7sQp7+hT2E+Io95fD0El8Nvztztby7l5IAJ2ddhAQmYIRfuPKhYdUR7ULa8Q+tSUv
-tsRANKsdM4geHpfoyrVgNckVSM/pli0xDvJJ0nbQWcYmxxzKLyNWtn/4HsLYxj8illI9CtqVg8sv
-fka6dXDM0p3yrN4TlT1HVzxlN4MyekoLRu2+zm7TWg==
+AcLBXAQAAQoABgUCaBpC0wAKCRDgT5vottzAEmTaD/4+m7UJU64O0/Nu5OimYd5aSYoi1PSH5nq6
+HK9F3vJnL0xpJRtnNgmUi1STghVa8ej2TOMvcTmgNcB+XG7xTadUEJIOu+GP7Q1WChnDQJjEFf0v
+9rL9/KI80ij00BHupRq3NZrru24TP72Rccd1I9Y1g0v6Y7eZODj6DLrIId9iIoYUqy3/jLAjoNq/
+Njm2+tlfC219gkyHQxYDtXRg5gPLpw58y9TkcaPj90WZAL1S3u/O6WvC3TSm8x1ESCx0HEfuHke8
+KcccjoTGshHKUsNHrdAs09SmJRS5m+JtgmO3yA1Fi/DiHHf6MAqxfTxao9vcu1yZlH/x710shOYS
+ySDMLllIKpU0p69Oo23uRgl/4fmuxiK/tGEYusMPTGmcy7jmnfRha6iYt4Dj3fWbZn88kkcwzheb
+RAzDItXBX/xcyqnBYt9821hDrGAgtpgNPWXx0l944VcYBoSEMx3LS+XITdiPwg08A9UZIgYBbc6z
+Pc02I4+7ObGmyxBpfFSNUxApkhph9fq97OfVe6LSnXR2p8m8EQ7tFBlIO+Wco9AeTxf6aS+vRjgd
+nhxfIfE7qlhzFEFV6BOQMPtR0zovramo3QYfig57erCLzt6YQvs/bUmdlIB5M7W6cdwC9X+jqV/f
+LHe4yOQIv4zZzcTxZeSVrlkIo2FcqpD6ishUecThqw==
