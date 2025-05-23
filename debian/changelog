@@ -1,3 +1,9 @@
+livecd-rootfs (25.10.4) questing; urgency=medium
+
+  * desktop: TPMFDE kernel from 25.10/candidate
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Sun, 25 May 2025 23:18:59 -0600
+
 livecd-rootfs (25.10.3) questing; urgency=medium
 
   * desktop: update TPMFDE model and don't skip 020-ubuntu-enhanced-sb.binary.
