@@ -59,7 +59,10 @@ reset_snapd_state chroot
 # so instead we're doing this, including forcing channel to stable for
 # everything but pc-kernel.
 env SNAPPY_STORE_NO_CDN=1 UBUNTU_STORE_COHORT_KEY="+" snap prepare-image \
-    --classic $model $channel --snap=pc-kernel=25.10/candidate chroot
+    --classic $model $channel \
+    --snap=pc-kernel=25.10/candidate \
+    --snap=snapd=latest/edge \
+    chroot
 
 mv chroot/system-seed/systems/* chroot/system-seed/systems/enhanced-secureboot-desktop
 rm -rf chroot/var/lib/snapd/seed
