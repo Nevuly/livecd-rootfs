@@ -1,3 +1,9 @@
+livecd-rootfs (25.10.7) questing; urgency=medium
+
+  * revert 25.10.6 due to duplicated snaps
+
+ -- Dan Bungert <daniel.bungert@canonical.com>  Tue, 10 Jun 2025 07:55:40 -0600
+
 livecd-rootfs (25.10.6) questing; urgency=medium
 
   * lb_binary_layered: fix mtimes in layered squashfses. (LP: #2107332)
