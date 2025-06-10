@@ -169,12 +169,6 @@ build_layered_squashfs () {
 			#  --del because we want to remove files that have been
 			#    deleted in this layer.
 			rsync -aXHAS --checksum --no-times --del chroot/ chroot-2/
-			# but since we used --no-times, mtime was not actually
-			# replicated to chroot-2, instead using the mtime of
-			# the moment of rsync.  This will break anything that
-			# requires an accurate mtime, so go fix that up.
-			# LP: #2107332
-			/usr/share/livecd-rootfs/sync-mtime chroot chroot-2
 			umount chroot-2
 			rmdir chroot-2
 			overlay_dir="$overlay_dir-2"
