@@ -317,6 +317,7 @@ Signed-By: /etc/apt/keyrings/$POOL_DIR.gpg
 
 					# Create an empty file to trigger initialization of assertions.
 					# Don't install snap packages for avoid build error in docker environment.
+					rm -rf config/seeded-snaps
 					truncate --size 0 config/seeded-snaps
 					snap_list=$(cat config/seeded-snaps)
 				fi

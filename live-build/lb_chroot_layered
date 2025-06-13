@@ -181,8 +181,8 @@ create_chroot_pass () {
 	setup_mountpoint chroot
 
 	# Snap management
-	lb_chroot_snap_lists ${pass} ${*}
-	lb_chroot_install_snaps ${pass} ${*}
+	# lb_chroot_snap_lists ${pass} ${*}
+	# lb_chroot_install_snaps ${pass} ${*}
 
 	teardown_mountpoint chroot
 
