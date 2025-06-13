@@ -312,8 +312,13 @@ Signed-By: /etc/apt/keyrings/$POOL_DIR.gpg
 		case $PROJECT:$SUBPROJECT in
 			*)
 				if [ -e "config/seeded-snaps" ]; then
+					# snap_list=$(cat config/seeded-snaps)
+					# preinstall_snaps $snap_list
+
+					# Create an empty file to trigger initialization of assertions.
+					# Don't install snap packages for avoid build error in docker environment.
+					truncate --size 0 config/seeded-snaps
 					snap_list=$(cat config/seeded-snaps)
-					preinstall_snaps $snap_list
 				fi
 				;;
 		esac
