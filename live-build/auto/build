@@ -467,7 +467,7 @@ fi
 # list of seeded snaps into the manifest.  In case of layered images we skip
 # this step, as we assume they're doing it on their own at some earlier stage.
 if [ -z "$PASSES" ] && [ -e "$PREFIX.manifest" ]; then
-	./config/snap-seed-parse "chroot/" "$PREFIX.manifest"
+	# ./config/snap-seed-parse "chroot/" "$PREFIX.manifest"
 fi
 
 for FLAVOUR in $LB_LINUX_FLAVOURS; do
